@@ -16,11 +16,11 @@ Docker: Containerizes the ELK Stack
 
 # 1️⃣ Install Docker & Docker Compose
 Ensure you have Docker and Docker Compose installed:
-bash'''
+
 sudo apt update && sudo apt install -y docker.io
 
 sudo apt install -y docker-compose
-'''
+
 # Verify installation:
 
 
