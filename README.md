@@ -12,4 +12,16 @@ Filebeat: Collects logs from applications
 
 Docker: Containerizes the ELK Stack
 
+#  🔹 Installation Steps
+
+# 1️⃣ Install Docker & Docker Compose
+Ensure you have Docker and Docker Compose installed:
+
+sudo apt update && sudo apt install -y docker.io
+sudo apt install -y docker-compose
+
+# Verify installation:
+
+
+
 
