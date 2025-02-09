@@ -89,5 +89,5 @@ Ensure you have Docker and Docker Compose installed:
 ##### Start Filebeat
     ./filebeat -e
 
-
+![staticwebsite](image.png)
 
