@@ -9,15 +9,15 @@ Implement centralized logging using Elasticsearch, Logstash, and Kibana (ELK) to
 
 ## Tech Stack
 
-**Elasticsearch:** Stores and indexes logs
+- **Elasticsearch:** Stores and indexes logs
 
-**Logstash:** Processes and forwards logs
+- **Logstash:** Processes and forwards logs
 
-**Kibana:** Visualizes logs with dashboards
+- **Kibana:** Visualizes logs with dashboards
 
-**Filebeat:**  Collects logs from applications
+- **Filebeat:**  Collects logs from applications
 
-**Docker:**  Containerizes the ELK Stack
+- **Docker:**  Containerizes the ELK Stack
 
 
 ## Installation Steps
@@ -75,13 +75,13 @@ Ensure you have Docker and Docker Compose installed:
 
  #### Edit Filebeat Configuration (filebeat.yml)
 
- ##### Edit this data in filebeats
+ ##### Edit this data in filebeats input
     filebeat.inputs:
         - type: log
          enabled: true
          paths:
          - /var/log/*.log  # Change this to your application log path
-
+##### Edit this data in Logstash output
     output.logstash:
     hosts: ["localhost:5044"]
 
@@ -97,6 +97,23 @@ Ensure you have Docker and Docker Compose installed:
     curl -X GET "http://localhost:9200/_cat/     indices?v"
 
 ##### You should see an index like app-logs-2025.02.06.
+![staticwebsite](image1.png)
+
+## 5️⃣ Visualize Logs in Kibana
+#### Open Kibana in your browser:
+
+    http://localhost:5601
+![staticwebsite](image2.png)
+
+##### Go to Stack Management → Index Patterns. Click Create Index Pattern and enter app-logs-*. Choose @timestamp as the time field. Save and go to Discover to view logs.
+![staticwebsite](image3.png)
+
+## Outcome
+##### A centralized logging system where:
+- Logs from your application are collected by Filebeat.
+- Logstash processes and forwards them to Elasticsearch.
+- Kibana helps visualize the logs.
+
 
 
 
