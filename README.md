@@ -69,9 +69,9 @@ Ensure you have Docker and Docker Compose installed:
 ### 3️⃣ Configure Filebeat to Collect Logs
 #### Install Filebeat
     curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.17.9-linux-x86_64.tar.gz
-
     tar -xzf filebeat-7.179-linux-x86_64.tar.gz
     cd filebeat-7.17.9-linux-x86_64
+
 
  #### Edit Filebeat Configuration (filebeat.yml)
 
