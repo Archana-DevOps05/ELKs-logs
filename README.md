@@ -91,3 +91,12 @@ Ensure you have Docker and Docker Compose installed:
 
 ![staticwebsite](image.png)
 
+## 4️⃣ Verify Data in Elasticsearch
+#### 
+#### Run:
+    curl -X GET "http://localhost:9200/_cat/     indices?v"
+
+##### You should see an index like app-logs-2025.02.06.
+
+
+
